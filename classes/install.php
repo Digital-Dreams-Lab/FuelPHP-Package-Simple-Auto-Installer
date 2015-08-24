@@ -139,7 +139,9 @@ class Install
 	
 		if($array) {
 			$connection = $array['environment'].'.default.connection.';
+			
 			static::$_dsn = $array['dsn'];
+			
 			\Config::set($connection.'dsn', 'mysql:host='.$array['host'].';dbname='.$array['dsn']);
 			\Config::set($connection.'username', $array['username']);
 			\Config::set($connection.'password', $array['password']);			
@@ -301,10 +303,10 @@ class Install
 			$basename = substr_replace($file->getBasename('.php'), '', 0, 4);
 			$class_name = ucfirst($basename);
 			$class = str_replace("create_", "", $basename);
+		
 			static::$_autoload['Fuel\\Migrations\\'.$class_name] =  $array['path'].$filename.'.php';
 			static::$_migrations['Fuel\\Migrations\\'.$class_name] =  $class;
-		}		
-
+		}
 		\Autoloader::add_classes(static::$_autoload);
 		\Autoloader::register();
 		
