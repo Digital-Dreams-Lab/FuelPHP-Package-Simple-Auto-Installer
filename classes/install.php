@@ -79,7 +79,7 @@ class Install
 	/**
 	 * Various get static vars functions
 	 *
-	 * @return	mixed		
+	 * @return  mixed		
 	 */
 	public static function get_filechecks() { return static::$_filechecks; }
 	public static function get_tablechecks() { return static::$_tablechecks; }
@@ -89,7 +89,7 @@ class Install
 	/**
 	 * Get static vars flash
 	 *
-	 * @return    mixed		
+	 * @return  mixed		
 	 */
 	public static function get_flash()
 	{	
@@ -107,9 +107,9 @@ class Install
 	/**
 	 * Get table list from database
 	 *
-	 * @param	string	$dsn		dsn.
+	 * @param   string	$dsn		dsn.
 	 * @access  public
-	 * @return	array				list of tables in database.		
+	 * @return  array				list of tables in database.		
 	 */
 	public static function get_tables($dsn)
 	{
