@@ -89,7 +89,7 @@ class Install
 	/**
 	 * Get static vars flash
 	 *
-	 * @return	mixed		
+	 * @return    mixed		
 	 */
 	public static function get_flash()
 	{	
